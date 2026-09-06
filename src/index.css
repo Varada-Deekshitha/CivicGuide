@@ -1,0 +1,229 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-serif: 'Newsreader', Georgia, Cambria, 'Times New Roman', Times, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    background-color: #fcfbf7;
+    color: #2c2c2c;
+    font-family: var(--font-sans);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  /* Dark mode root styles */
+  html.dark body,
+  .dark body,
+  body.dark {
+    background-color: #0b1118;
+    color: #f1f5f9;
+  }
+
+  /* Natural Tones typography defaults */
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-serif);
+    letter-spacing: -0.015em;
+  }
+
+  ::selection {
+    background-color: #c87a53;
+    color: #ffffff;
+  }
+
+  .dark ::selection {
+    background-color: #2563eb;
+    color: #ffffff;
+  }
+}
+
+/* Natural Tones Specific Utility Shortcuts */
+.font-serif {
+  font-family: 'Newsreader', Georgia, Cambria, serif;
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Backgrounds */
+.bg-natural-canvas { background-color: #fcfbf7; }
+.bg-natural-card { background-color: #ffffff; }
+.bg-natural-sand { background-color: #f9f7f2; }
+.bg-natural-clay { background-color: #f4f1ea; }
+.bg-natural-clay-muted { background-color: #edeae1; }
+.bg-soft-sage { background-color: #e8ede9; }
+.bg-sage { background-color: #8ca38f; }
+.bg-olive { background-color: #4a5d4e; }
+.bg-olive-dark { background-color: #364539; }
+.bg-terracotta { background-color: #c87a53; }
+.bg-terracotta-hover:hover { background-color: #b56b46; }
+
+/* Text colors */
+.text-olive { color: #4a5d4e; }
+.text-olive-dark { color: #364539; }
+.text-terracotta { color: #c87a53; }
+.text-sage { color: #8ca38f; }
+.text-charcoal { color: #2c2c2c; }
+.text-stone-muted { color: #737067; }
+
+/* Borders */
+.border-clay { border-color: #e2dcd0; }
+.border-terracotta { border-color: #c87a53; }
+.border-sage { border-color: #8ca38f; }
+.border-olive { border-color: #4a5d4e; }
+
+/* ==========================================================================
+   Comprehensive Dark Mode Palette
+   ========================================================================== */
+.dark {
+  color-scheme: dark;
+}
+
+/* Canvas & Cards */
+.dark .bg-\[\#fcfbf7\] {
+  background-color: #0b1118 !important;
+}
+
+.dark .bg-white {
+  background-color: #131c27 !important;
+  color: #f1f5f9;
+}
+
+.dark .bg-\[\#f4f1ea\] {
+  background-color: #101721 !important;
+}
+
+.dark .bg-\[\#edeae1\] {
+  background-color: #172230 !important;
+  color: #cbd5e1 !important;
+}
+
+.dark .bg-\[\#f9f7f2\] {
+  background-color: #111a24 !important;
+}
+
+.dark .bg-\[\#fdfcf9\] {
+  background-color: #0d151f !important;
+}
+
+.dark .bg-\[\#e8ede9\] {
+  background-color: #14281e !important;
+  color: #6ee7b7 !important;
+}
+
+.dark .bg-\[\#38483b\] {
+  background-color: #112016 !important;
+  border-color: #1e3827 !important;
+}
+
+.dark .bg-\[\#2d3a2f\] {
+  background-color: #0e1a12 !important;
+}
+
+.dark .bg-\[\#e2dcd0\] {
+  background-color: #1c2736 !important;
+  color: #f1f5f9 !important;
+}
+
+/* Borders */
+.dark .border-\[\#e2dcd0\] {
+  border-color: #223040 !important;
+}
+
+.dark .border-\[\#d2ddd4\] {
+  border-color: #1f382a !important;
+}
+
+.dark .border-\[\#2d3a2f\] {
+  border-color: #1e3827 !important;
+}
+
+.dark .border-\[\#4a5d4e\] {
+  border-color: #2b4c37 !important;
+}
+
+.dark .divide-\[\#e2dcd0\] > :not([hidden]) ~ :not([hidden]) {
+  border-color: #223040 !important;
+}
+
+/* Text elements */
+.dark .text-\[\#2c2c2c\] {
+  color: #f8fafc !important;
+}
+
+.dark .text-\[\#364539\] {
+  color: #a7f3d0 !important;
+}
+
+.dark .text-\[\#5c5953\] {
+  color: #cbd5e1 !important;
+}
+
+.dark .text-\[\#737067\] {
+  color: #94a3b8 !important;
+}
+
+.dark .text-\[\#635c51\] {
+  color: #94a3b8 !important;
+}
+
+.dark .text-\[\#4a5d4e\] {
+  color: #34d399 !important;
+}
+
+.dark .text-\[\#c87a53\] {
+  color: #fb923c !important;
+}
+
+/* Hover effects */
+.dark .hover\:bg-\[\#edeae1\]:hover {
+  background-color: #1a2636 !important;
+}
+
+.dark .hover\:bg-\[\#f4f1ea\]:hover {
+  background-color: #182230 !important;
+}
+
+.dark .hover\:bg-\[\#fcfbf7\]:hover {
+  background-color: #151f2c !important;
+}
+
+.dark .hover\:text-\[\#2c2c2c\]:hover {
+  color: #ffffff !important;
+}
+
+.dark .hover\:text-\[\#4a5d4e\]:hover {
+  color: #6ee7b7 !important;
+}
+
+/* Inputs & forms */
+.dark input[type="text"],
+.dark input[type="number"],
+.dark input[type="email"],
+.dark input[type="password"],
+.dark select,
+.dark textarea {
+  background-color: #0f1722 !important;
+  border-color: #263548 !important;
+  color: #f8fafc !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #64748b !important;
+}
+
+/* Modals & shadows */
+.dark .shadow-xs,
+.dark .shadow-sm,
+.dark .shadow-md,
+.dark .shadow-xl {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.45);
+}
+

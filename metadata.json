@@ -1,0 +1,6 @@
+{
+  "name": "CivicGuide — Government Scheme & Service Finder",
+  "description": "A citizen-friendly web application to discover government schemes, check eligibility, track required documents, and explore application guidance.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
